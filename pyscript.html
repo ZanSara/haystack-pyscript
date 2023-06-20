@@ -12,7 +12,7 @@
         let pyodide = await loadPyodide();
         await pyodide.loadPackage("micropip");
         const micropip = pyodide.pyimport("micropip");
-        await micropip.install(wheel_url, keep_going=True);
+        await micropip.install(wheel_url, keep_going=true);
         await pyodide.runPython(`
         import haystack
           print('Hello, World!')
